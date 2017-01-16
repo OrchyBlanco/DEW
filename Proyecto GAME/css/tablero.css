@@ -1,0 +1,116 @@
+#tablero{
+  display: flex;
+  justify-content: center;
+}
+
+table{
+	border: solid 1px black;
+	border-collapse: collapse;
+}
+td{
+  max-height: 32px;
+	max-width: 32px;
+	height: 32px;
+	width: 32px;
+padding: 0;
+	border: solid 0px black;
+}
+
+.suelo{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -430px -34px;
+}
+.salida{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -529px -34px;
+}
+.muroSalidaArriba{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -133px -199px;
+}
+.muroSalidaAbajo{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -133px -265px;
+}
+.muroSalidaDerecha{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -100px -232px;}
+.muroSalidaIzquierda{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -166px -232px;
+}
+
+.paredArribaAbajo{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -133px -100px;
+}
+.paredDerechaIzquierda{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -100px -133px;
+}
+.esquinaArribaDerecha{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -166px -100px;
+}
+.esquinaArribaIzquierda{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -100px -100px;
+}
+.esquinaAbajoDerecha{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -166px -166px;
+}
+.esquinaAbajoIzquierda{
+  background: url('../img/sprites/mapa.png')  ;
+  background-position: -100px -166px;
+}
+
+
+
+.pj1{
+  background: url('../img/sprites/pjSheet.png') ;
+  background-position: -32px 0px;
+  height: 32px;
+  width: 32px;
+}
+.pj2{
+  background: url('../img/sprites/pjSheet.png') ;
+  background-position: -32px -128px;
+  height: 32px;
+  width: 32px;
+}
+
+.goblin{
+  background: url('../img/sprites/enemy1.png') ;
+  background-position: -96px 0px;
+  height: 32px;
+  width: 32px;
+}
+.rat{
+  background: url('../img/sprites/enemy2.png') ;
+  background-position: -29px 0px;
+  height: 32px;
+  width: 32px;
+}
+.esqueleto{
+  background: url('../img/sprites/enemy1.png') ;
+  background-position: -32px 0px;
+  height: 32px;
+  width: 32px;
+}
+.boss{
+  background: url('../img/sprites/enemy2.png') ;
+  background-position: -224px 0px;
+  height: 32px;
+  width: 32px;
+}
+.ataque {
+  background: url('../img/sprites/slash.png') ;
+  background-position: 32px 32px;
+
+  height: 32px;
+  width: 32px;
+}
+.estadoJugador{
+  margin:  1em;
+}

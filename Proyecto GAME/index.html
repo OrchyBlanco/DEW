@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/movimientoSprite.css" media="screen" title="no title" charset="utf-8">
+
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--/BOOTSTRAP-->
+    <title>Proyecto Juego</title>
+</head>
+
+<body>
+    <main>
+          <audio controls autoplay loop hidden>
+          <source src="multi/music_form.ogg" type="audio/ogg">
+          El navegador no soporta el elemento de audio
+        </audio>
+        <div class="row title">
+            <h1 class="col-sm-2 col-sm-push-3">¡Bienvenido!</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-2 sidenav">
+                <img src="img/gif/antorcha_izq.gif" alt="Decorado Antorcha" />
+            </div>
+
+
+            <div class="formulario col-sm-8">
+                <form action="html/game.html" id="formulario" method="post">
+                    <div class="row">
+                        <div class="form-group col-sm-3">
+                            <label for="nombreJugador" class="control-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombreJugador" placeholder="El Desconocido">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-offset-3">
+                            <label class="radio-inline">
+                        <input type="radio" name="personaje" value="pj1" >
+                        <div class="pj1"></div>
+                      </label>
+                            <label class="radio-inline">
+                        <input type="radio" name="personaje" value="pj2" >
+                        <div class="pj2"></div>
+                      </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="submit" id="btnJugar" class="btn btn-success btn-lg col-sm-offset-4 " value="Jugar" disabled/><!--class="btn btn-success btn-lg col-sm-offset-4 " -->
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+            <div class="col-sm-2 sidenav">
+                <img src="img/gif/antorcha_der.gif" alt="Decorado Antorcha" />
+            </div>
+        </div>
+
+
+    </main>
+</body>
+<script src="js/Formulario.js" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,13 @@
+.pj1{
+background: url('../img/sprites/pjSheet.png')  ;
+background-position: -32px 0px;
+height: 32px;
+width: 32px;
+}
+
+.pj2{
+background: url('../img/sprites/pjSheet.png') ;
+background-position: -32px -129px;
+height: 32px;
+width: 32px;
+}

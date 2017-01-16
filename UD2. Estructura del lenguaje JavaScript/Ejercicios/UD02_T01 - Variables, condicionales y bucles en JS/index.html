@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="css/estiloSimple.css">
+    <link rel="stylesheet" href="css/estiloNavegador.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/metodosGlobales.js"></script>
+    <script type="text/javascript" src="js/ejercicio01.js"></script>
+    <script type="text/javascript" src="js/ejercicio02.js"></script>
+    <script type="text/javascript" src="js/ejercicio03.js"></script>
+    <script type="text/javascript" src="js/ejercicio04.js"></script>
+    <script type="text/javascript" src="js/ejercicio05.js"></script>
+    <script type="text/javascript" src="js/ejercicio06.js"></script>
+    <script type="text/javascript" src="js/ejercicio07.js"></script>
+    <script type="text/javascript" src="js/ejercicio08.js"></script>
+    <script type="text/javascript" src="js/ejercicio09.js"></script>
+    <script type="text/javascript" src="js/ejercicio10.js"></script>
+    <title>Ejercicio: Variables, condicionales y bucles en JS</title>
+</head>
+
+<body>
+    <header></header>
+    <nav id="navegador">
+        <ul>
+            <li><a href="#actividad1">Ejercicio 1</a></li>
+            <li><a href="#actividad2">Ejercicio 2</a></li>
+            <li><a href="#actividad3">Ejercicio 3</a></li>
+            <li><a href="#actividad4">Ejercicio 4</a></li>
+            <li><a href="#actividad5">Ejercicio 5</a></li>
+            <li><a href="#actividad6">Ejercicio 6</a></li>
+            <li><a href="#actividad7">Ejercicio 7</a></li>
+            <li><a href="#actividad8">Ejercicio 8</a></li>
+            <li><a href="#actividad9">Ejercicio 9</a></li>
+            <li><a href="#actividad10">Ejercicio 10</a></li>
+        </ul>
+    </nav>
+    <section>
+        <noscript>
+          <h1>
+            La página requiere uso de JavaScript.
+          </h1>
+        </noscript>
+
+        <article id="actividad1">
+            <h1>ACTIVIDAD1</h1>
+            <form action="">
+                <input type="text" id="numero1" class="variablesActividad1" placeholder="número 1">
+                <input type="text" id="numero2" class="variablesActividad1" placeholder="número 2">
+                <input type="text" id="numero3" class="variablesActividad1" placeholder="número 3">
+                <input type="text" id="numero4" class="variablesActividad1" placeholder="número 4">
+                <input type="text" id="numero5" class="variablesActividad1" placeholder="número 5">
+
+                <button type="button" onclick="actividad1()">enviar</button>
+            </form>
+            <div class="resultados">
+                <p>Mayor número: <span id="actividad1MayorNum"></span></p>
+                <p>Menor número: <span id="actividad1MenorNum"></span></p>
+                <p>Suma de los números: <span id="actividad1Suma"></span></p>
+                <p>Media aritmética: <span id="actividad1Media"></span></p>
+            </div>
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad2">
+            <h1>ACTIVIDAD2</h1>
+            <form action="">
+                <input type="text" class="variablesActividad2" placeholder="número 1">
+                <input type="text" class="variablesActividad2" placeholder="número 2">
+                <input type="text" class="variablesActividad2" placeholder="número 3">
+                <input type="text" class="variablesActividad2" placeholder="número 4">
+                <input type="text" class="variablesActividad2" placeholder="número 5">
+                <button type="button" onclick="actividad2()">Enviar</button>
+            </form>
+            <div class="resultados">
+                <p>Mayor número: <span id="actividad2MayorNum"></span></p>
+                <p>Menor número: <span id="actividad2MenorNum"></span></p>
+                <p>Suma de los números: <span id="actividad2Suma"></span></p>
+                <p>Media aritmética: <span id="actividad2Media"></span></p>
+                <p>Calificación:<span id="actividad2Calificación"></span></p>
+            </div>
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad3">
+            <h1>ACTIVIDAD3</h1>
+            <figure>
+                <img src="img/imagen01.jpg" class="imagenesEj3" alt="Imagen 1" onclick="actividad03(1)">
+                <img src="img/imagen02.jpg" class="imagenesEj3" alt="Imagen 2" onclick="actividad03(2)">
+                <img src="img/imagen03.jpg" class="imagenesEj3" alt="Imagen 3" onclick="actividad03(3)">
+                <img src="img/imagen04.jpg" class="imagenesEj3" alt="Imagen 4" onclick="actividad03(4)">
+                <img src="img/imagen05.jpg" class="imagenesEj3" alt="Imagen 5" onclick="actividad03(5)">
+            </figure>
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad4">
+            <h1>ACTIVIDAD4</h1>
+            <form action="">
+                <button type="button" onclick="actividad4()">Empezar</button>
+            </form>
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad5">
+            <h1>ACTIVIDAD5</h1>
+            <form action="">
+                <input type="text" id="variableActividad5" class="variablesActividad5" placeholder="Introducir un número">
+                <button type="button" onclick="actividad5()">Enviar</button>
+            </form>
+
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad6">
+            <h1>ACTIVIDAD6</h1>
+
+            <form action="">
+                <input type="text" id="textoActividad6" class="textosActividad6" placeholder="Introducir una de estas palabras: profesor,manzana servidor o mar">
+                <button type="button" onclick="actividad6()">Enviar</button>
+            </form>
+            <p id="resultadoActividad6">
+            </p>
+
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad7">
+            <h1>ACTIVIDAD7</h1>
+            <input type="date" id="userDate" placeholder="yyyy-mm-dd" />
+            <input type="button" value="Calcular Edad" onclick="actividad7()" />
+            <div id="resultadoActividad7">
+
+            </div>
+            <a href="#navegador"> subir</a>
+        </article>
+
+        <article id="actividad8">
+            <h1>ACTIVIDAD8</h1>
+
+            <a href="#navegador"> subir</a>
+        </article>
+
+
+        <article id="actividad9">
+            <h1>ACTIVIDAD9</h1>
+            <form>
+              <input type="text" id="letraAct9" class="valoresAct9" placeholder="Letra">
+              <input type="text" id="nColumnasAct9" class="valoresAct9" placeholder="Número de columnas">
+              <input type="button" value="Hacer Triángulo" onclick="actividad9(document.getElementById('letraAct9').value,
+                                                                     document.getElementById('nColumnasAct9').value)">
+            </form>
+
+            <div id="resultadoActividad9">
+
+            </div>
+            <a href="#navegador"> subir</a>
+        </article>
+
+
+        <article id="actividad10">
+            <h1>ACTIVIDAD 10</h1>
+            <form>
+              <input type="text" id="letra1Act10" class="valoresAct10" placeholder="Letra primaria">
+              <input type="text" id="letra2Act10" class="valoresAct10" placeholder="Letra secundaria">
+              <input type="text" id="nColumnasAct10" class="valoresAct10" placeholder="Número de columnas">
+              <input type="button" value="Hacer Triángulo" onclick="actividad10(document.getElementById('letra1Act10').value,
+                                                                                document.getElementById('letra2Act10').value,
+                                                                                document.getElementById('nColumnasAct10').value)">
+            </form>
+
+            <p id="resultadoActividad10">
+
+            </p>
+
+            <a href="#navegador"> subir</a>
+        </article>
+
+    </section>
+    <footer>
+      <p>
+        Realizado por Jesús Manuel Torres Blanco
+      </p>
+    </footer>
+</body>
+
+</html>
