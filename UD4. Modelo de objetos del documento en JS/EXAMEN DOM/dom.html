@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="dom.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="dom.css" media="screen" title="no title" charset="utf-8">
+  <title>DOM</title>
+</head>
+<body onload="cargar()">
+  <div id="bloque1">
+    <input type="text" class="color1"  placeholder="Color Hexadecimal">
+    <input type="text" class="color2" placeholder="Color Hexadecimal">
+    <input type="text" class="color3"  placeholder="Color Hexadecimal">
+    <input type="button" id="enviar" onclick='añadirColores()' value="Enviar">
+  </div>
+
+
+  <div id="bloque2"></div>
+
+
+  <div id="zonaTabla"></div>
+  <div id="bloque4">
+    <input type="button" name="name" value="Limpiar tabla" onclick="limpiarTabla()">
+    <input type="button" name="name" value="Eliminar Colores" onclick="limpiarWS()">
+  </div>
+</body>
+</html>

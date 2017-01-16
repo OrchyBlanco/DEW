@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/uD2_T02.js">
+
+  </script>
+  <title>UD2_T02</title>
+</head>
+<body onload="mostrarDatos()">
+  <nav>
+    <ul>
+      <li><a href="#ejercicio1">Ejercicio1</a></li>
+      <li><a href="#ejercicio2">Ejercicio2</a></li>
+      <li><a href="#ejercicio3">Ejercicio3</a></li>
+    </ul>
+  </nav>
+  <section>
+    <article id="ejercicio1" >
+      <h1>Ejercicio 1</h1>
+      <div id="datos">
+
+      </div>
+      <button type="button" name="BuscarAlumno" onclick="document.getElementById('ResultadosE1').innerHTML =mostrarLista(buscarAlumno(prompt('Nombre a buscar:')));">Buscar alumno</button>
+      <button type="button" name="ModificarNota" onclick="cambiarNota(prompt('Nombre del Alumno:'),Number(prompt('Nueva Nota:')));">Modificar nota</button>
+      <button type="button" name="MediaAritmetica" onclick="document.getElementById('ResultadosE1').innerHTML =media(listaClase)">Calcular Media</button>
+      <button type="button" name="MaxNota" onclick="document.getElementById('ResultadosE1').innerHTML =maxNota()">Mejor nota</button>
+      <button type="button" name="MinNota" onclick="document.getElementById('ResultadosE1').innerHTML =minNota()">Peor nota</button>
+      <div id="ResultadosE1">
+
+      </div>
+
+    </article>
+
+    <article id="ejercicio2">
+      <h1>Ejercicio 2</h1>
+      <p>Introduzca el numero de horas estacionadas.</p>
+      <input type="text" id="horasEstacionadas" value="" placeholder="72" pattern="[0-9]+">
+      <button type="button"onclick="document.getElementById('ResultadosE2').innerHTML = calcularCargos()" >Calcular Cobro</button>
+      <div id="ResultadosE2">
+
+      </div>
+    </article>
+
+    <article id="ejercicio3">
+      <h1>Ejercicio 3</h1>
+      <div id="datosLibros">
+
+      </div>
+    </article>
+  </section>
+</body>
+</html>

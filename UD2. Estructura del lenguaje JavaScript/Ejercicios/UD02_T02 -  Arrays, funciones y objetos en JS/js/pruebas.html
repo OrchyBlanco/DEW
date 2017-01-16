@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Loops</h1>
+
+    <p>Funciones como clases</p>
+
+    <div id="demo"></div>
+
+    <script>
+        var listaClase = [{nombre:"Pepe", nota:1},
+                          {nombre:"Marta", nota:5},
+                          {nombre:"Juan", nota:10},
+                          {nombre:"Pepe", nota:0},
+                        {nombre:"Jesus", nota:8}];
+        function buscarAlumno(nombreBuscar) {
+          var resultadoBusqueda=[];
+          for (var i in listaClase) {
+            if (listaClase[i].nombre==nombreBuscar) {
+               resultadoBusqueda.push(listaClase[i])
+            }
+          }
+          return resultadoBusqueda;
+        }
+
+        function mostrarLista(nombreLista){
+          var resultadoMostrar="";
+          for (var i in nombreLista) {
+            resultadoMostrar+="<p>"+nombreLista[i].nombre+":"+nombreLista[i].nota+"</p>"
+          }
+          if (resultadoMostrar==="") {
+            resultadoMostrar="NADA ENCONTRADO"
+          }
+          return resultadoMostrar;
+        }
+
+        function cambiarNota(nombreAlumno,nuevaNota) {
+          var listaAlumnosEncontrados=buscarAlumno(nombreAlumno);
+          for (var i in listaAlumnosEncontrados) {
+            var comprobar=confirm(" ¿Quieres cambiar la nota de: "+
+                                listaAlumnosEncontrados[i].nombre+
+                                " cuya nota actual es: "+
+                                  listaAlumnosEncontrados[i].nota+"?");
+            if (comprobar===true) {
+              listaAlumnosEncontrados[i].nota=nuevaNota;
+            }
+
+
+          }
+        }
+
+       function maxNota(){
+        var ordenAcs= listaClase.sort(function(a,b) {
+          return listaClase[a]-listaClase[b];
+        })
+        return ordenAsc;
+        alert(ordenAsc);
+      };
+
+        function minNota(){
+          var notasMin=[];
+          for (var i in listaClase) {
+            notasMin.push(listaClase[i].nota);
+          }
+
+          return Math.min(...notasMin);
+        }
+
+        function media(nombreLista){
+          var suma=0;
+          for (var i = 0; i < nombreLista.length; i++) {
+            suma += nombreLista[i].nota;
+          }
+          return suma/nombreLista.length
+        }
+
+        document.getElementById("demo").innerHTML =maxNota();
+
+
+
+
+
+
+
+
+
+
+        /*    var listaClase = [{nombre:"Pepe", nota:1},
+                              {nombre:"Marta", nota:2},
+                              {nombre:"Juan", nota:3},
+                              {nombre:"Pepe", nota:4},
+                              {nombre:"Jesus", nota:5}];
+            function buscarAlumno(nombreBuscar) {
+              var resultadoBusqueda="";
+              for (var i in listaClase) {
+                if (listaClase[i].nombre==nombreBuscar) {
+                  resultadoBusqueda+="<p>"+ listaClase[i].nombre+" "+listaClase[i].nota+"</p>";
+                }
+              }
+              return resultadoBusqueda;
+            }
+*/
+    </script>
+
+</body>
+
+</html>

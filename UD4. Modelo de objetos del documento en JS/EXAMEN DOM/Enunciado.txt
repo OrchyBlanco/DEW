@@ -1,0 +1,25 @@
+UD04-P01: Proyecto / Examen
+
+Enunciado
+
+Utilizando el DOM realizar las siguientes tareas:
+
+- [3,5 puntos]
+
+    [0,5 ptos] Pedir al usuario 3 colores. En este caso, entendemos que el usuario introduce un valor válido y no se harán más comprobaciones.
+    [1,5 ptos] Crear una lista con los colores introducidos por el usuario. Para la lista se usará un radiobutton, un texto que ponga color x (1,2,…n), donde el texto será del color especificado.
+    [0,5 ptos] A continuación, se presentará una lista en la que el usuario podrá seleccionar el estilo de la fuente, que será negrita o normal. También se usarán radiobutton para estas opciones.
+    [1 pto] Almacenar los valores de los colores en el WebStorage de forma que al cargar la página si existen colores previamente creados no se vuelvan a pedir y se cree la lista con estos valores.
+
+- [6 puntos] 
+
+    [1,5 ptos] Crear un tablero de 10 x 10.
+    [3 ptos] El usuario seleccionará uno de los colores  y el estilo de la fuente, y al hacer clic sobre una de las celdas estas se pintarán de ese color y se escribirá dentro una “X” con el formato que haya escogido.
+    [1 ptos] La página contendrá un botón, “limpiar”, que borre todo el contenido del  tablero, de forma que se reinicie el tablero para que se pueda volver a pintar. Solo hay que reiniciar el tablero no la página.
+    [0,5] Añadir un botón "eliminar colores", que borre los colores almacenados en el WebStorage.
+
+- [0,5 punto] por la claridad y presentación de los resultados, los comentarios utilizados en el código, separación de código JS en fichero externo y su identación. 
+
+A entregar:
+
+Fichero comprimido con el código fuente.

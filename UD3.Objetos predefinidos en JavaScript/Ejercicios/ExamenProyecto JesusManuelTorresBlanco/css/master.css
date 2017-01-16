@@ -1,0 +1,11 @@
+main nav ul li{
+  margin: 0.5em;
+  display: inline-block;
+}
+input{
+  float: left;
+}
+label{float: left;
+  clear: both;
+}
+footer{clear: both;}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--/BOOTSTRAP-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="estilo.css">
+    <!--/CSS-->
+
+    <!--JS-->
+    <script type="text/javascript" src="Formulario.js">
+    </script>
+    <script type="text/javascript" src="FormularioInit.js">
+    </script>
+    <!--/JS-->
+    <title>Formulario</title>
+</head>
+
+<body>
+
+    <div ><br>
+
+        <form id="formulario" class="form-horizontal" action="#">
+            <!--ENTRADA DE NIF-->
+            <div class="form-group">
+                <label for="identificacionNIF" class="col-sm-2 control-label">NIF</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="identificacionNIF"  placeholder="Introduzca su NIF sin espacios en blanco ni guiones." required="true">
+                </div>
+            </div>
+            <!--ENTRADA DE FECHA-->
+            <div class="form-group">
+                <label for="inputFecha" class="col-sm-2 control-label">Fecha de nacimiento</label>
+                <div class="col-sm-4">
+                    <input class="form-control" id="inputFecha" placeholder="Introduzca fecha en el siguiente formato. DD/MM/AAAA">
+                </div>
+            </div>
+            <!--ENTRADA DE CLAVE-->
+            <div class="form-group">
+                <label for="inputClave" class="col-sm-2 control-label">Clave de acceso</label>
+                <div class="col-sm-2">
+                    <input type="password" class="form-control" id="inputClave" readonly="true" maxlength="5">
+                </div>
+                <div class="col-sm-9">
+                    <button type="button" class="btn btn-link btnLimpiar">Limpiar clave</button>
+                </div>
+            </div>
+
+            <!--PANEL BOTONES-->
+            <div class="form-group" id="panelEntradaClave">
+
+                <div class="col-sm-2 col-sm-offset-2 panel panel-default">
+                    <div class="panel-body" id="panelDeBotones">
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                        <button type="button" class="col-sm-2 btn btn-primary btnEntrada" value=""></button>
+                    </div>
+                </div>
+            </div>
+
+            <!--ENTRADA DE TIPO SOLICITANTE-->
+            <div class="form-group">
+                <label for="inputClave" class="col-sm-2 control-label">Tipo de Solicitante</label>
+                <div class="col-sm-5">
+                    <div class="radio">
+                        <label><input type="radio" name="solicitante">Profesor</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="solicitante">Alumno</label>
+                    </div>
+                </div>
+                <div class="col-sm-5" id="CamposSolicitante">
+
+                </div>
+            </div>
+            <!--ENTRADA DE GÉNERO-->
+            <div class="form-group">
+                <label for="inputClave" class="col-sm-2 control-label">Genero</label>
+                <div class="col-sm-2" id="radioGenero">
+                    <div class="radio" >
+                        <label><input type="radio" name="genero" value="hombre">Hombre</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="genero" value="mujer">Mujer</label>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-left media-middle">
+                        <img src="" class="media-object" id="imgGenero" style="width:60px">
+                    </div>
+                </div>
+
+            </div>
+            <!--ENVIO DE DATOS-->
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-1">
+                    <button type="submit" id="btnEnviar" class="btn btn-default">Enviar</button>
+                </div>
+                <div class="col-sm-1">
+                    <button type="reset" id="btnReset" class="btn btn-default">Limpiar Formulario</button>
+                </div>
+            </div>
+
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>

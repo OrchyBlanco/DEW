@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ud3t01.css">
+    <script type="text/javascript" src="js/ud3t01.js">
+    </script>
+    <title>UD3T01</title>
+</head>
+
+<body onload="mostrarResolucion()">
+    <div class="Propiedades">
+        <h1>
+        Propiedades de Screen, Navigator y Location
+      </h1>
+        <script type="text/javascript">
+            propiedadesNavigator();
+            propiedadesLocation()
+        </script>
+    </div>
+
+    <div class="Matematicas">
+        <h1>Clase Math</h1>
+
+        <div id="Calculos1">
+            <input type="text" id="numeroA" placeholder="NumeroA" pattern="[0-9]+">
+            <input type="text" id="numeroB" placeholder="NumeroB"  pattern="[0-9]+">
+            <input type="button" name="name" value="Calcular" onclick="calculo()">
+            <div id="Resultados1">
+
+            </div>
+        </div>
+        <div id="Calulos2">
+            <input type="text" id="catetoA" placeholder="CatetoA">
+            <input type="text" id="catetoB" placeholder="CatetoB">
+            <input type="button" name="name" value="Calcular" onclick="hipotenusa()">
+            <div id="Resultados2">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="Palabras">
+        <input type="text" id="Frase" placeholder="Introduce una frase">
+        <input type="button" value="Transformar" onclick="darleLaVueltaPalabras(document.getElementById(Frase).value)">
+        <div class="resultadoPalabras">
+            <div id="resultadopalabra1"></div>
+            <div id="resultadopalabra2"></div>
+            <div id="resultadopalabra3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

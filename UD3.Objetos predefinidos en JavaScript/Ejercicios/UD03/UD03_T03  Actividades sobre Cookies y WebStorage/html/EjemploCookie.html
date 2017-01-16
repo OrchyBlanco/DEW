@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Cookie Example</title>
+    <script language="javascript">
+
+        function setCookie(nombre, value) {
+            var expdate = new Date();
+            expdate.setTime(expdate.getTime()+  60* 10000);
+            document.cookie = nombre + "=" + encodeURIComponent(value) ;
+        }
+
+        function getCookie(nombre) {
+            var index = document.cookie.indexOf(nombre + "=");
+            if (index == -1)
+                return null;
+            index = document.cookie.indexOf("=", index) + 1;
+            var endstr = document.cookie.indexOf(";", index);
+            if (endstr == -1)
+                endstr = document.cookie.length;
+            return decodeURIComponent(document.cookie.substring(index, endstr));
+        }
+        
+    </script>
+</head>
+
+<body>
+    <script language="javascript">
+        var tuNIF = getCookie("MiCookie");
+        if (tuNIF == null) {
+            tuNIF = prompt("Por favor, introduce tu NIF", "");
+            setCookie("MiCookie", tuNIF, 30);
+        } else{
+            alert("Hola usuario " + tuNIF + "\nBienvenido");
+      }
+      document.write(document.cookie);
+      document.cookie.split(';')
+    </script>
+</body>
+<html>

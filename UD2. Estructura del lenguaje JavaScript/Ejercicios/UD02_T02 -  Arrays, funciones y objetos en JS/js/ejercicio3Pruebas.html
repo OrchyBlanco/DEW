@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Loops</h1>
+
+    <p>Funciones como clases</p>
+
+    <div id="demo"></div>
+
+    <script>
+        function Libro(titulo, propietario, paginas) {
+            this.titulo = titulo;
+            this.propietario = propietario;
+            this.paginas = paginas;
+        }
+
+        Libro.prototype.mostrarConsola = function() {
+            console.log("Has leído las " + this.paginas + " páginas de " + this.titulo);
+        };
+
+        function Libro(titulo, propietario, paginas,autor) {
+            this.titulo = titulo || "sombra de los vientos";
+            this.propietario = propietario;
+            this.paginas = paginas;
+            this.autor=autor;
+        }
+        Libro.prototype={
+
+          leiste: function() {
+            console.log("Has leído "+this.titulo);
+          }
+
+        }
+
+        var libro1=new Libro("","Jesus",800)
+        libro1.leiste();
+
+      
+      //  document.getElementById("demo").innerHTML = libro1.propietario;
+
+    </script>
+
+</body>
+
+</html>

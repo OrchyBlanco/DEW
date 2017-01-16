@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="DataObject.js" charset="utf-8"></script>
+    <script src="datos.js" charset="utf-8"></script>
+    <script src="ud06t02.js" charset="utf-8"></script>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--VALIDATE.JS-->
+    <script type="text/javascript" src="validate.min.js"></script>
+
+    <!--API GOOGLE MAPS-->
+    <!-- API KEY: AIzaSyDAE7P__gSF7IZHPmvOipe9Je0hgf6kKDc-->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDAE7P__gSF7IZHPmvOipe9Je0hgf6kKDc&sensor=FALSE">
+    </script>
+    <style>
+          html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+          }
+          #map {
+            height: 100%;
+          }
+        </style>
+
+
+    <title>UD06T02</title>
+</head>
+
+<body onload="CargarDATOS()">
+    <main>
+        <div class="row">
+            <div class="seleccionIsla col-md-2 col-md-push-1">
+                <form class="form-group ">
+                    <label for="selIsla">Selecciona una Isla</label>
+                    <select class="form-control" id="selIsla">
+                      <option value=""></option>
+                      <option value="Tenerife">Tenerife</option>
+                      <option value="La Palma">La Palma</option>
+                      <option value="Todas">Todas</option>
+                    </select>
+                </form>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="seleccionModalidad col-md-4 col-md-push-1">
+                <form class="form-group ">
+                    <label for="selModalidad">Selecciona una Modalidad</label>
+                    <div>
+                        <label class="checkbox-inline" id="modPresencial">
+                    <input type="checkbox" name="selModalidad" id="checkPresencial" value="Presencial">Presencial
+                  </label>
+                        <label class="checkbox-inline" id="modSemipresencial">
+                    <input type="checkbox" name="selModalidad" id="checkSemipresencial" value="A distancia">Semipresencial
+                  </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="seleccionFormacion col-md-4 col-md-push-1">
+                <form class="form-group ">
+                    <label for="selFormacion">Selecciona una Formacion</label>
+                    <div id="selFormacion">
+                        <label class="checkbox-inline">
+                    <input type="checkbox" value="Ciclo Formativo de Grado Medio">Grado Medio
+                  </label>
+                        <label class="checkbox-inline">
+                    <input type="checkbox" value="Ciclo Formativo de Grado Superior">Grado Superior
+                  </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="seleccionCiclo col-md-4 col-md-push-1">
+            <form class="form-group ">
+                <label for="selCiclo">Selecciona un Ciclo</label>
+                <div id="selCiclo">
+                    <label class="checkbox gSuperior">
+                    <input type="checkbox" value="Administración de Sistemas Informáticos en Red">Administración de Sistemas Informáticos y Redes
+                  </label>
+                    <label class="checkbox gSuperior">
+                    <input type="checkbox" value="Desarrollo de aplicaciones web">Desarrollo de Aplicaciones Web
+                  </label>
+                    <label class="checkbox gSuperior">
+                    <input type="checkbox" value="Desarrollo de Aplicaciones Multiplataforma">Desarrollo de Aplicaciones Multiplataforma
+                  </label>
+                    <label class="checkbox gMedio">
+                    <input type="checkbox"  value="Sistemas Microinformáticos y Redes">Sistemas Microinformáticos y Redes
+                  </label>
+                </div>
+            </form>
+        </div>
+
+
+        <div id="map" class="mapa col-md-4 col-md-push-1"style="width:500px; height:500px"></div>
+
+        </div>
+    </main>
+</body>
+
+</html>
