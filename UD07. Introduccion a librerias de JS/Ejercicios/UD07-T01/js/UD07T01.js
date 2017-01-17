@@ -9,8 +9,8 @@ $("#myList").children("li").first().next().next();
 
 $("#myList").children("li:odd").first().next();
 //3 Seleccionar el elemento label del elemento input utilizando un selector de atributo.
-elmInput = $("body").find("[for=" + $("body").find("input").attr('name') + "]");
-console.log("Elementos label del elemento input: " + elmInput);
+elmLabel = $("body").find("[for=" + $("body").find("input").attr('name') + "]");
+console.log("Elementos label del elemento input: " + elmLabel);
 //4 Averiguar cuantos elementos en la página están ocultos (ayuda: .length).
 
 console.log("Elementos ocultos: " + $("body").find(":hidden").length);
@@ -64,25 +64,47 @@ $("div")
     elmOption="<option value='wednesday'>Wednesday</option>";
     elmSelect.append(elmOption);
 //5  Añadir un nuevo div.module a la página después del último; luego añadir una copia de una de las imágenes existentes dentro del nuevo div.
+  img=$("img").first();
+  copia=img.clone(true);
+  nuevoDivModule="<div class='module'></div>";
 
+  $("div.module").last().after(nuevoDivModule);
+  $("div.module").last().append(copia);
 //SUGERENCIA
 
 //1    Establecer el valor del elemento input igual al valor del elemento label.
-
+      valorElementoLabel=$("label").text(); //PREGUNTAR POR .VAL()
+      $Input=$(".input_text");
+      $Input.val(valorElementoLabel);
 //2    Añadir la clase “hint” al elemento input.
-
+      $Input.addClass("hint");
 //3    Remover el elemento label.
-
+      $("label").remove();
 //4    Vincular un evento focus en el input para remover el texto de sugerencia y la clase “hint”.
-
+      $(document).ready(function () {
+          $("form").on('focusin','.input_text',function () {
+            $(this).val("");
+            $(this).removeClass('hint');
+          });
+      });
 //5    Vincular un evento blur en el input para restaurar el texto de sugerencia y la clase “hint” en caso que no se haya ingresado algún texto.
-
+        $(document).ready(function () {
+            $("form").on('blur','.input_text',function () {
+              if ($.trim($('.input_text').val())==="") {
+                $(this).val(valorElementoLabel);
+                $(this).addClass("hint");
+              }
+            });
+        });
 //NAVEGACION POR PESTAÑAS
 
-
 //1 Ocultar todos los elementos div.module.
-
+  //  $("div.module").attr("hidden","true");
 //2  Crear una lista desordenada antes del primer div.module para utilizar como pestañas.
+    elemtUl="<ul></ul>";
+  elemtLi="<li></li>";
+    $("div.module").first().before(elemtUl);
+    $Ul=$("div.module").prev().closest("ul");
 
 //3  Interactuar con cada div utilizando $.fn.each. Por cada uno, utilizar el texto del elemento h2 como el texto para el ítem de la lista desordenada.
 
@@ -92,7 +114,7 @@ $("div")
 
 //4.2  añada la clase “current” al ítem seleccionado;
 
-//4.3    remueva la clase “current” del otro ítem de la lista.
+//4.3  remueva la clase “current” del otro ítem de la lista.
 
 //5  Finalmente, mostrar la primera pestaña.
 
@@ -106,15 +128,25 @@ $("div")
 //MENU DESPLEGABLE
 
 //1 Al pasar el puntero del ratón por encima de un ítem del menú, se debe mostrar su submenú en caso que exista;
-
+$("#nav").find("li").hover(function() {
+  $(this).find("ul").slideDown();
+});
 //2 Al no estar más encima de un ítem, el submenú se debe ocultar
-
+$("#nav").find("li").hover(function() {
+    $(this).find("ul").slideDown();
+}, function() {
+    $(this).find("ul").slideUp();
+});
 //CREAR SLIDESHOW
 
 //1  Mover el elemento #slideshow a la parte superior de la página;
 
 //2  Escribir un código que permita mostrar los ítems de forma cíclica, mostrando un ítem por unos segundos, luego ocultándolo con un efecto fade out y mostrando el siguiente con un efecto fade in;
-
+/*setInterval(function() {
+var elemSlide = $("#slideshow").children().first().next();
+elemSlide.fadeIn();
+$("#slideshow").children().first().next().fadeOut();
+}, 5000);*/
 //3  Una vez llegado al último ítem de la lista, comenzar de nuevo con el primero;
 
 //4  Incluir un área de navegación por debajo del slideshow que muestre cuantas imágenes existen y en cual se encuentra (ayuda: $.fn.prevAllpuede resultar útil).
