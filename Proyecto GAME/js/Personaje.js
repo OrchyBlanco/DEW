@@ -26,8 +26,6 @@ Personaje.prototype = {
     },
     colocarPersonaje: function() {
 
-
-
         this.casillaActual.appendChild(this.character);
     },
 
