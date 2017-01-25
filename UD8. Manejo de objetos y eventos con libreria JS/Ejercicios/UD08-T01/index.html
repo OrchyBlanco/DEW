@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Reciclar!!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reciclar.css">
+
+    <!--JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--jQuery Validation-->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js" type="text/javascript"></script>
+    <!--jQueryUI-->
+
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js" charset="utf-8"></script>
+
+
+
+    <!--TOASTR -->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div id="form" class="row" title="¿Cuál es tu nombre?">
+            <form id="formulario" action="#" method="post">
+                <textarea id="nombreApellidos" class="col-md-12" name="nombreApellidos" placeholder="Nombre y Apellidos"></textarea>
+                <button id="btnName" class="col-md-push-4 ui-button ui-widget ui-corner-all" type="button" name="button">A jugar</button>
+            </form>
+        </div>
+        <div id="nivel" class="row" title="Nivel de dificultad">
+            <button id="facil" type="button" class="btnNivel col-md-push-1 col-md-3 ui-button ui-widget ui-corner-all" name="button" value="4">Facil</button>
+            <button id="medio" type="button" class="btnNivel col-md-push-1 col-md-3 ui-button ui-widget ui-corner-all" name="button" value="7">Medio</button>
+            <button id="dificil" type="button" class="btnNivel col-md-push-1 col-md-3 ui-button ui-widget ui-corner-all" name="button" value="9">Dificil</button>
+        </div>
+        <div id="aReciclar" class="row" hidden>
+            <div id="contenedores" class="row">
+                <div id="organica" class="contenedor col-md-2"><img src="img/gris.png" alt="organica"></div>
+                <div id="plastico" class="contenedor col-md-2"><img src="img/amarillo.png" alt="plastico"></div>
+                <div id="vidrio" class="contenedor col-md-2"><img src="img/verde.png" alt="vidrio"></div>
+                <div id="papel" class="contenedor col-md-2"><img src="img/azul.png" alt="papel"></div>
+            </div>
+            <div id="basuras" class="row">
+
+            </div>
+        </div>
+
+        <div id="resultado" title="Puntuación">
+            <button id="otraVez" type="button" name="button" class="ui-button ui-widget ui-corner-all">¿Quieres jugar de nuevo?</button>
+        </div>
+    </div>
+</body>
+<script src="reciclar.js" charset="utf-8"></script>
+
+</html>

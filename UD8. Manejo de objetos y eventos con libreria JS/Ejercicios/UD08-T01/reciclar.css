@@ -1,0 +1,28 @@
+
+#aReciclar{
+  min-width: 500px;
+  min-height: 500px;
+
+}
+
+
+.contenedor img{
+
+width: 150px;
+height: 150px;
+}
+
+.contenedor{
+  margin: 2em;
+
+}
+
+
+.basura{
+margin: 2em;
+
+background-repeat: no-repeat !important;
+background-size: 90px 90px !important;
+width: 90px !important;
+height: 90px !important;
+}

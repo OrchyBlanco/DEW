@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <!--JQUERY-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!--JQUERY-UI-->
+        <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet"/>
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <!--TOASTR-->
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" media="screen" rel="stylesheet" type="text/css" />
+        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+        <!--BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="resources/css/estilos.css"/>
+        <title>Reservas Vuelo</title>
+    </h:head>
+    <h:body id="indexReservasVuelo" >
+
+        <!--NAVEGADOR-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Reserva Tu Vuelo</a>
+                </div>
+
+                <div class="nav navbar-nav navbar-right">
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-globe "></span></button>
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Español</a></li>
+                            <li><a href="#">Ingles</a></li>
+                            <li><a href="#">Valenciano</a></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </nav>
+        <!--Fin NAVEGADOR-->
+        <!--HEADER-->
+        <div class="jumbotron text-center">
+            <h1>¡Reserva tu vuelo al mejor precio!</h1>
+
+            <form class="form-inline">
+
+                <input type="email" class="form-control" size="50" placeholder="Origen" required="true"></input>
+                <input type="text" class="form-control" size="50" placeholder="Destino" required="true"></input>
+
+                <button type="button" class="btn btn-success btn-lg">Buscar Vuelo</button>
+
+
+            </form>
+        </div>
+        <!--Fin HEADER-->
+        <!--BUSCAR VUELO-->
+        
+    </h:body>
+    <!--JS -->
+</html>
+
