@@ -61,7 +61,7 @@ $(function() {
 
     });
     //--Puntuacion--//
-    
+
     $("#resultado").dialog({
         autoOpen: false,
         modal: true,
@@ -86,7 +86,7 @@ $(function() {
 
 
 //--------VALIDACIONES------//
-/*$("#formulario").submit(function (event) {
+$("#formulario").submit(function (event) {
     event.preventDefault();
   }).validate({
     debug:false,
@@ -102,7 +102,7 @@ $(function() {
         nombreApellidos: "Introduce unicamente letras"
       }
     }
-  });*/
+  });
 
 //-------------BASURA-----------//
 Basura = function(numeroBasura) {
