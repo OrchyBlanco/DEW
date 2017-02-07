@@ -7,7 +7,7 @@ $("#myList").find("li").first().next().next();
 
 $("#myList").children("li").first().next().next();
 
-$("#myList").children("li:odd").first().next();
+$("#myList").children("li:odd").first().next(); //Mejor forma
 //3 Seleccionar el elemento label del elemento input utilizando un selector de atributo.
 elmLabel = $("body").find("[for=" + $("body").find("input").attr('name') + "]");
 console.log("Elementos label del elemento input: " + elmLabel);
@@ -42,6 +42,7 @@ elmSelect.parent().next().children();
 primerItemSlide = $("#slideshow").children().first();
 primerItemSlide.addClass("current");
 primerItemSlide.siblings().addClass("disabled");
+
 //MANIPULACION
 
 //1  Añadir 5 nuevos ítems al final de la lista desordenada #myList.
@@ -70,6 +71,7 @@ $("div")
 
   $("div.module").last().after(nuevoDivModule);
   $("div.module").last().append(copia);
+
 //SUGERENCIA
 
 //1    Establecer el valor del elemento input igual al valor del elemento label.
@@ -96,6 +98,7 @@ $("div")
               }
             });
         });
+
 //NAVEGACION POR PESTAÑAS
 
 //1 Ocultar todos los elementos div.module.
@@ -120,7 +123,6 @@ $("div")
 
 //MOSTRAR OCULTAR TEXTO
 
-
 //1  Al hacer click en alguno de los titulares del div #blog, se debe mostrar el párrafo correspondiente con un efecto de deslizamiento;
 
 //2  Al hacer click en otro titular, se debe ocultar el párrafo mostrado con un efecto de deslizamiento y mostrar nuevamente el párrafo correspondiente también con un efecto de deslizamiento. Ayuda: No se olvide de utilizar el selector :visible.
@@ -137,6 +139,8 @@ $("#nav").find("li").hover(function() {
 }, function() {
     $(this).find("ul").slideUp();
 });
+
+
 //CREAR SLIDESHOW
 
 //1  Mover el elemento #slideshow a la parte superior de la página;

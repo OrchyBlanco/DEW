@@ -77,6 +77,7 @@ $(function() {
             $(".ui-dialog-titlebar-close", ui.dialog | ui).hide();
         }
     });
+    
     $("#otraVez").on("click", function() {
         $("#resultado").dialog("close");
         $("#nivel").dialog("open");
